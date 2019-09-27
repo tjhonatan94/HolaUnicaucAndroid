@@ -13,11 +13,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        btn = new Button(this);
+//Set up the interface according to activity_hello_x XML layout
+        setContentView(R.layout.activity_main);
+//Get an instance of the button via inflation
+        btn = (Button) findViewById(R.id.);
+//Set up a listener for listening button events (click)
         btn.setOnClickListener(this);
-        updateTime();
-        setContentView(btn);
+//Call this method to update the button text with current date and time
+//updateTime();
+        btn.setText("Bienvenido a tu primera App");
     }
 
     private void updateTime() {
